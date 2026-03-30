@@ -26,23 +26,111 @@ $$[A + BCD]^{-1} = A^{-1} - A^{-1}B[C^{-1} + DA^{-1}B]^{-1}DA^{-1}$$
     Dimensi: $k \times n$.
     Peran: Menyesuaikan dimensi kembali dari ruang sistem utama ke ruang modif
 
-### Contoh Soal
-Diketahui:
-* $A = \begin{bmatrix} 4 & 0 \\ 0 & 4 \end{bmatrix}$
-* $B = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$
-* $C = [1]$
-* $D = \begin{bmatrix} 1 & 0 \end{bmatrix}$
-  
-**Penyelesaian:**
 
-1. **Hitung Invers A:**
-   $$A^{-1} = \begin{bmatrix} 0.25 & 0 \\ 0 & 0.25 \end{bmatrix}$$
+Untuk membuktikan bahwa rumus tersebut benar, kita kalikan ruas kiri dengan matriks $(A + BCD)$.
 
-2. **Hitung Operasi Internal ($DA^{-1}B$):**
-   $$DA^{-1}B = [0.25]$$
+---
 
-3. **Hitung Invers Inti:**
-   $$[1 + 0.25]^{-1} = [0.8]$$
+### Langkah 1
 
-4. **Hasil Akhir ($M^{-1}$):**
-   $$M^{-1} = \begin{bmatrix} 0.2 & 0 \\ 0 & 0.25 \end{bmatrix}$$
+$$
+A^{-1} - A^{-1}B(C^{-1} + DA^{-1}B)^{-1}DA^{-1}
+$$
+
+---
+
+### Langkah 2
+
+Gunakan sifat distributif perkalian matriks.
+
+$$
+= A^{-1}A + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}A - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}BCD
+$$
+
+---
+
+### Langkah 3
+
+Sederhanakan beberapa bagian matriks.
+
+Karena:
+
+$$
+A^{-1}A = I
+$$
+
+maka diperoleh:
+
+$$
+= I + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}D - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}BCD
+$$
+
+---
+
+### Langkah 4
+
+Gunakan identitas:
+
+$$
+D = C^{-1}C D
+$$
+
+sehingga diperoleh:
+
+$$
+= I + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}C^{-1}CD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}BCD
+$$
+
+---
+
+### Langkah 5
+
+Gabungkan faktor matriks:
+
+$$
+= I + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}(C^{-1}+DA^{-1}B)CD
+$$
+
+---
+
+### Langkah 6
+
+Karena:
+
+$$
+(C^{-1}+DA^{-1}B)^{-1}(C^{-1}+DA^{-1}B) = I
+$$
+
+maka:
+
+$$
+= I + A^{-1}BCD - A^{-1}BCD
+$$
+
+---
+
+### Hasil Akhir
+
+$$
+= I
+$$
+
+---
+
+## Kesimpulan
+
+Karena
+
+$$
+(A + BCD)^{-1}(A + BCD) = I
+$$
+
+maka terbukti bahwa:
+
+$$
+(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}
+$$
+
+yang disebut sebagai **Matrix Inversion Lemma**.
+
+
