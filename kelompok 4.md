@@ -1,10 +1,11 @@
 # KELOMPOK 4B
-### 1. Dela Agreni Suarang
-### 2. Siti Naurah Fatinah Malihah
-### 3. Josua Aido Arta Sitorus
-### 4. Hijrah
-### 5. Aulia Zezarya
-
+### 1. Dela Agreni Suarang            (H061251042)
+### 2. Siti Naurah Fatinah Malihah    (H061251047)
+### 3. Josua Aido Arta Sitorus        (H061251052)
+### 4. Hijrah                         (H061251057)
+### 5. Aulia Zezarya                  (H061251063)
+### 6. Rizka Dwi Elvira               (H061251080)
+### 7. Syahwa Nur Fadiah MS           (H061251070)
 
 # Matrix Inversion Lemma
 ## Definisi Matrix Inversion Lemma
